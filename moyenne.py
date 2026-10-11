@@ -2,8 +2,8 @@
 
 # NB: Ce fichier contient du code à compléter
 
-from rich.markdown import Markdown
 from rich.console import Console
+from rich.markdown import Markdown
 
 
 def moyenne(valeurs):
@@ -22,8 +22,18 @@ def moyenne(valeurs):
 
     ---
     """
-    print("!! TODO : Compléter la fonction moyenne !!", end=" ")
-    pass
+
+    n = len(valeurs)
+    res = 0
+
+    if n == 0:
+
+        raise ValueError
+
+    for i in range(n):
+        res = valeurs[i] + res
+
+    return res / n
 
 
 if __name__ == "__main__":
